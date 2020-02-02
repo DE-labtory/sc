@@ -1,0 +1,30 @@
+server:
+  port: 8080
+
+logging:
+  level:
+    root: info
+    org:
+      hibernate:
+        type: trace
+
+spring:
+  application:
+    name: userupgradepolicy
+  profiles: default
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password: password
+    driver-class-name: org.h2.Driver
+  h2:
+    console:
+      enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database: h2
+    database-platform: org.hibernate.dialect.H2Dialect
+    open-in-view: false
+    generate-ddl: false
