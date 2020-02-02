@@ -33,6 +33,7 @@ public class User {
         this.name = name;
         this.login = 0;
         this.recommend = 0;
+        this.level = Level.BASIC;
     }
 
     User(Long id, String name, Level level, int login, int recommend) {
